@@ -74,7 +74,7 @@ public class login extends AppCompatActivity {
         if (account != null) {
 
             String personName = account.getDisplayName();
-            Intent intent = new Intent(login.this, MainActivity.class);
+            Intent intent = new Intent(login.this, Image.class);
             intent.putExtra("Name",personName);
             startActivity(intent);
 
