@@ -374,18 +374,16 @@ public class Image extends AppCompatActivity {
             encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
         }
 
-//        public void share(View v){
-//            final Intent shareIntent = new Intent(Intent.ACTION_SEND);
-//            shareIntent.setType("image/jpg");
-//            final File photoFile = new File(selectedImagePath);
-//            shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(photoFile));
-//            startActivity(Intent.createChooser(shareIntent, "Share image using"));
-//
-//        }
-
-
 
     }
 
+    public void share(View v){
+        final Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("image/jpg");
+        final File photoFile = new File(selectedImagePath);
+        shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(photoFile));
+        startActivity(Intent.createChooser(shareIntent, "Share image using"));
+
+    }
 
 }
